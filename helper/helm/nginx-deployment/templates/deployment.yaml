@@ -24,9 +24,9 @@ spec:
         tag: alpine
     spec:
       containers:
-      - image: {{ .Values.image.name }}:{{ .Values.image.name }}
+      - image: {{ .Values.image.repository }}:{{ .Values.image.name }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
-        name: nginx-alpine-v1
+        name: nginx-alpine
         resources:
           requests:
             cpu: {{ .Values.resources.requests.cpu }}
